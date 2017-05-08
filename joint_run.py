@@ -23,11 +23,11 @@ tf.flags.DEFINE_integer("batch_size", 32, "Batch size for training.")
 tf.flags.DEFINE_integer("hops", 3, "Number of hops in the Memory Network.")
 tf.flags.DEFINE_integer("epochs", 60, "Number of epochs to train for.")
 tf.flags.DEFINE_integer("embedding_size", 40, "Embedding size for embedding matrices.")
-tf.flags.DEFINE_integer("memory_size", 50, "Maximum size of memory.")
+tf.flags.DEFINE_integer("memory_size", 228, "Maximum size of memory.")
 tf.flags.DEFINE_integer("random_state", None, "Random state.")
 tf.flags.DEFINE_string("data_dir", "data/babi-tasks-v1-2/tasks_1-20_v1-2/en/", "Directory containing bAbI tasks")
 tf.flags.DEFINE_string("log_dir", "logs", "Directory containing logs")
-tf.flags.DEFINE_string("output_file", "scores.csv", "Name of output file for final bAbI accuracy scores.")
+tf.flags.DEFINE_string("output_file", "scores-ex2.csv", "Name of output file for final bAbI accuracy scores.")
 FLAGS = tf.flags.FLAGS
 
 if tf.gfile.Exists(FLAGS.log_dir):

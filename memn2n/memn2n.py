@@ -24,6 +24,7 @@ def position_encoding(sentence_size, embedding_size):
     encoding[:, -1] = 1.0
     return np.transpose(encoding)
 
+
 def zero_nil_slot(t, name=None):
     """
     Overwrites the nil_slot (first row) of the input Tensor with zeros.
@@ -232,6 +233,7 @@ class MemN2N(object):
             # Use last C for output (transposed)
             with tf.variable_scope('hop_{}'.format(self._hops)):
                 return tf.matmul(u_k, tf.transpose(self.C[-1], [1,0]))
+
 
     def batch_fit(self, stories, queries, answers, learning_rate, merged):
         """Runs the training algorithm over the passed batch
