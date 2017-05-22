@@ -7,6 +7,7 @@ from __future__ import division
 
 import tensorflow as tf
 import numpy as np
+from tensorflow.contrib import rnn
 
 
 def position_encoding(sentence_size, embedding_size):
@@ -168,13 +169,14 @@ class MemN2N(object):
     def _build_vars(self):
         with tf.variable_scope(self._name):
             nil_word_slot = tf.zeros([1, self._embedding_size])
-            A = tf.concat(axis=0, values=[ nil_word_slot, self._init([self._vocab_size-1, self._embedding_size]) ])
-            C = tf.concat(axis=0, values=[ nil_word_slot, self._init([self._vocab_size-1, self._embedding_size]) ])
 
+            A = tf.concat(axis=0, values=[nil_word_slot, self._init([self._vocab_size - 1, self._embedding_size])])
             self.A_1 = tf.Variable(A, name="A")
 
+            C = tf.concat(axis=0, values=[ nil_word_slot, self._init([self._vocab_size-1, self._embedding_size]) ])
             self.C = []
 
+            # do we need different matricies C?
             for hopn in range(self._hops):
                 with tf.variable_scope('hop_{}'.format(hopn)):
                     self.C.append(tf.Variable(C, name="C"))
@@ -183,7 +185,7 @@ class MemN2N(object):
             # self.H = tf.Variable(self._init([self._embedding_size, self._embedding_size]), name="H")
 
             # Use final C as replacement for W
-            # self.W = tf.Variable(self._init([self._embedding_size, self._vocab_size]), name="W")
+            #cdself.W = tf.Variable(tf.concat(axis=0, values=[tf.zeros([1, self._embedding_size ]), self._init([self._vocab_size - 1, self._embedding_size ])]), name="W")
 
         self._nil_vars = set([self.A_1.name] + [x.name for x in self.C])
 
@@ -191,18 +193,44 @@ class MemN2N(object):
         with tf.variable_scope(self._name):
             # Use A_1 for thee question embedding as per Adjacent Weight Sharing
             q_emb = tf.nn.embedding_lookup(self.A_1, queries)
-            u_0 = tf.reduce_sum(q_emb * self._encoding, 1)
+            q_emb = q_emb * self._encoding
+            x = tf.unstack(q_emb, q_emb.shape[1], 1)
+
+            with tf.variable_scope("encoder", reuse=False):
+                lstm_cell = tf.contrib.rnn.BasicLSTMCell(self._embedding_size, forget_bias=1.0)
+                _, state_queries = rnn.static_rnn(lstm_cell, x, dtype=tf.float32)
+
+            print(q_emb)
+            print(tf.reduce_sum(q_emb, 1))
+            u_0 = state_queries[0]
+            #u_0 = tf.concat([state_queries[0], tf.reduce_sum(q_emb, 1)], axis = 1)
+
+            #u_0 = tf.reduce_sum(q_emb * self._encoding, 1)
             u = [u_0]
 
             for hopn in range(self._hops):
                 if hopn == 0:
                     m_emb_A = tf.nn.embedding_lookup(self.A_1, stories)
-                    m_A = tf.reduce_sum(m_emb_A * self._encoding, 2)
+                    #m_A = tf.reduce_sum(m_emb_A * self._encoding, 2)
+                    m_emb_A = m_emb_A * self._encoding
 
                 else:
                     with tf.variable_scope('hop_{}'.format(hopn - 1)):
                         m_emb_A = tf.nn.embedding_lookup(self.C[hopn - 1], stories)
-                        m_A = tf.reduce_sum(m_emb_A * self._encoding, 2)
+                        m_emb_A = m_emb_A * self._encoding
+                        #m_A = tf.reduce_sum(m_emb_A * self._encoding, 2)
+
+                y = tf.unstack(m_emb_A, m_emb_A.shape[1], 1)
+                y = list(map(lambda x: tf.unstack(x, x.shape[1], 1), y))
+                state_stories = []
+
+                for y_1 in y:
+                    with tf.variable_scope("encoder", reuse=True):
+                        _, state_story = rnn.static_rnn(lstm_cell, y_1, dtype=tf.float32)
+                        state_stories.append(state_story[0])
+
+                m_A = tf.stack(state_stories, axis=1)
+               # m_A = tf.concat([m_A, tf.reduce_sum(m_emb_A, 2)], axis=2)
 
                 # hack to get around no reduce_dot
                 u_temp = tf.transpose(tf.expand_dims(u[-1], -1), [0, 2, 1])
@@ -214,7 +242,23 @@ class MemN2N(object):
                 probs_temp = tf.transpose(tf.expand_dims(probs, -1), [0, 2, 1])
                 with tf.variable_scope('hop_{}'.format(hopn)):
                     m_emb_C = tf.nn.embedding_lookup(self.C[hopn], stories)
+                    m_emb_C = m_emb_C * self._encoding
+
+                #y = tf.unstack(m_emb_C, m_emb_C.shape[1], 1)
+                #y = list(map(lambda x: tf.unstack(x, x.shape[1], 1), y))
+                state_stories = []
+
+                #for y_1 in y:
+                #   with tf.variable_scope("encoder", reuse=True):
+
+                        #initial_state = lstm_cell.zero_state(m_emb_C.shape[0], self._embedding_size, tf.float32)
+                #        _, state_story = rnn.static_rnn(lstm_cell, y_1, dtype=tf.float32)
+
+                #        state_stories.append(state_story[0])
+
+                #m_C = tf.stack(state_stories, axis=1)
                 m_C = tf.reduce_sum(m_emb_C * self._encoding, 2)
+                #m_C = tf.concat([m_C, tf.reduce_sum(m_emb_C, 2)], axis=2)
 
                 c_temp = tf.transpose(m_C, [0, 2, 1])
                 o_k = tf.reduce_sum(c_temp * probs_temp, 2)
@@ -223,6 +267,7 @@ class MemN2N(object):
                 # u_k = tf.matmul(u[-1], self.H) + o_k
 
                 u_k = u[-1] + o_k
+                print(u_k)
 
                 # nonlinearity
                 if self._nonlin:
@@ -231,8 +276,13 @@ class MemN2N(object):
                 u.append(u_k)
 
             # Use last C for output (transposed)
+            #with tf.variable_scope('hop_{}'.format(self._hops)):
+            #print(self.W[-1])
+            #print(tf.transpose(self.W))
+            #return tf.matmul(u_k, tf.transpose(self.W))
+            # Use last C for output (transposed)
             with tf.variable_scope('hop_{}'.format(self._hops)):
-                return tf.matmul(u_k, tf.transpose(self.C[-1], [1,0]))
+                return tf.matmul(u_k, tf.transpose(self.C[-1], [1, 0]))
 
 
     def batch_fit(self, stories, queries, answers, learning_rate, merged):
