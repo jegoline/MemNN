@@ -19,15 +19,15 @@ tf.flags.DEFINE_float("anneal_rate", 15, "Number of epochs between halving the l
 tf.flags.DEFINE_float("anneal_stop_epoch", 60, "Epoch number to end annealed lr schedule.")
 tf.flags.DEFINE_float("max_grad_norm", 40.0, "Clip gradients to this norm.")
 tf.flags.DEFINE_integer("evaluation_interval", 10, "Evaluate and print results every x epochs")
-tf.flags.DEFINE_integer("batch_size", 32, "Batch size for training.")
+tf.flags.DEFINE_integer("batch_size", 100, "Batch size for training.")
 tf.flags.DEFINE_integer("hops", 3, "Number of hops in the Memory Network.")
 tf.flags.DEFINE_integer("epochs", 60, "Number of epochs to train for.")
-tf.flags.DEFINE_integer("embedding_size", 40, "Embedding size for embedding matrices.")
+tf.flags.DEFINE_integer("embedding_size", 30, "Embedding size for embedding matrices.")
 tf.flags.DEFINE_integer("memory_size", 50, "Maximum size of memory.")
 tf.flags.DEFINE_integer("random_state", None, "Random state.")
-tf.flags.DEFINE_string("data_dir", "data/babi-tasks-v1-2/tasks_1-20_v1-2/en/", "Directory containing bAbI tasks")
+tf.flags.DEFINE_string("data_dir", "data/babi-tasks-v1-2/tasks_1-20_v1-2/en-10k/", "Directory containing bAbI tasks")
 tf.flags.DEFINE_string("log_dir", "logs", "Directory containing logs")
-tf.flags.DEFINE_string("output_file", "scores.csv", "Name of output file for final bAbI accuracy scores.")
+tf.flags.DEFINE_string("output_file", "scores_10k_memsize_50_embeddingsize_40.csv", "Name of output file for final bAbI accuracy scores.")
 FLAGS = tf.flags.FLAGS
 
 if tf.gfile.Exists(FLAGS.log_dir):
@@ -134,15 +134,19 @@ with tf.Session() as sess:
 
         np.random.shuffle(batches)
         total_cost = 0.0
+        print("epoch " + str(t) + " batches " + str(len(batches)))
         for start, end in batches:
             s = trainS[start:end]
             q = trainQ[start:end]
             a = trainA[start:end]
             cost_t, summary = model.batch_fit(s, q, a, lr, merged)
             total_cost += cost_t
+            #print("batch " + str(start) + " " + str(end))
 
+        print("evaluation..")
         if t % FLAGS.evaluation_interval == 0:
             train_accs = []
+            print("train accuracy..")
             for start in range(0, n_train, int(n_train / 20)):
                 end = start + int(n_train / 20)
                 s = trainS[start:end]
@@ -154,6 +158,7 @@ with tf.Session() as sess:
                 train_accs.append(acc)
 
             val_accs = []
+            print("val accuracy..")
             for start in range(0, n_val, int(n_val / 20)):
                 end = start + int(n_val / 20)
                 s = valS[start:end]
@@ -165,6 +170,7 @@ with tf.Session() as sess:
                 val_accs.append(acc)
 
             test_accs = []
+            print("test accuracy..")
             for start in range(0, n_test, int(n_test / 20)):
                 end = start + int(n_test / 20)
                 s = testS[start:end]
@@ -175,17 +181,17 @@ with tf.Session() as sess:
                 acc = metrics.accuracy_score(pred, test_labels[start:end])
                 test_accs.append(acc)
 
-            train_preds, summary = model.predict(trainS, trainQ, trainA, merged)
-            train_writer.add_summary(summary, t)
-            train_acc = metrics.accuracy_score(train_preds, train_labels)
+            #train_preds, summary = model.predict(trainS, trainQ, trainA, merged)
+            #train_writer.add_summary(summary, t)
+            #train_acc = metrics.accuracy_score(train_preds, train_labels)
 
-            val_preds, summary = model.predict(valS, valQ, valA, merged)
-            val_writer.add_summary(summary, t)
-            val_acc = metrics.accuracy_score(val_preds, val_labels)
+            #val_preds, summary = model.predict(valS, valQ, valA, merged)
+            #val_writer.add_summary(summary, t)
+            #val_acc = metrics.accuracy_score(val_preds, val_labels)
 
-            test_preds, summary = model.predict(testS, testQ, testA, merged)
-            test_writer.add_summary(summary, t)
-            test_acc = metrics.accuracy_score(test_preds, test_labels)
+            #test_preds, summary = model.predict(testS, testQ, testA, merged)
+            #test_writer.add_summary(summary, t)
+            #test_acc = metrics.accuracy_score(test_preds, test_labels)
 
             print('-----------------------')
             print('Epoch', t)
@@ -211,11 +217,11 @@ with tf.Session() as sess:
     df.index.name = 'Task'
     df.to_csv(FLAGS.output_file)
 
-    test_preds, summary = model.predict(testS, testQ, testA, merged)
-    test_writer.add_summary(summary, t)
-    test_acc = metrics.accuracy_score(test_preds, test_labels)
+    #test_preds, summary = model.predict(testS, testQ, testA, merged)
+    #test_writer.add_summary(summary, t)
+    #test_acc = metrics.accuracy_score(test_preds, test_labels)
 
-    print("Testing Accuracy:", test_acc)
+    #print("Testing Accuracy:", test_acc)
     train_writer.close()
     test_writer.close()
     val_writer.close()
