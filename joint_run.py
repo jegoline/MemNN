@@ -64,6 +64,7 @@ sentence_size += 1  # +1 for time words
 print("Longest sentence length", sentence_size)
 print("Longest story length", max_story_size)
 print("Average story length", mean_story_size)
+print("Number of stories that do not fit to mem", sum(1 for s, _, _ in data if len(s) > 50))
 
 # train/validation/test sets
 trainS = []

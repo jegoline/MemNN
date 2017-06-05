@@ -190,18 +190,18 @@ class MemN2N(object):
         with tf.variable_scope(self._name):
             # Use A_1 for thee question embedding as per Adjacent Weight Sharing
             q_emb = tf.nn.embedding_lookup(self.A_1, queries)
-            u_0 = tf.reduce_sum(q_emb * self._encoding, 1)
+            u_0 = tf.reduce_sum(q_emb, 1)
             u = [u_0]
 
             for hopn in range(self._hops):
                 if hopn == 0:
                     m_emb_A = tf.nn.embedding_lookup(self.A_1, stories)
-                    m_A = tf.reduce_sum(m_emb_A * self._encoding, 2)
+                    m_A = tf.reduce_sum(m_emb_A, 2)
 
                 else:
                     with tf.variable_scope('hop_{}'.format(hopn - 1)):
                         m_emb_A = tf.nn.embedding_lookup(self.C[hopn - 1], stories)
-                        m_A = tf.reduce_sum(m_emb_A * self._encoding, 2)
+                        m_A = tf.reduce_sum(m_emb_A, 2)
 
                 # hack to get around no reduce_dot
                 u_temp = tf.transpose(tf.expand_dims(u[-1], -1), [0, 2, 1])
@@ -213,7 +213,7 @@ class MemN2N(object):
                 probs_temp = tf.transpose(tf.expand_dims(probs, -1), [0, 2, 1])
                 with tf.variable_scope('hop_{}'.format(hopn)):
                     m_emb_C = tf.nn.embedding_lookup(self.C[hopn], stories)
-                m_C = tf.reduce_sum(m_emb_C * self._encoding, 2)
+                m_C = tf.reduce_sum(m_emb_C, 2)
 
                 c_temp = tf.transpose(m_C, [0, 2, 1])
                 o_k = tf.reduce_sum(c_temp * probs_temp, 2)
