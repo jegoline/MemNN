@@ -1,0 +1,1900 @@
+Starting Task: 1
+Starting Task: 2
+Starting Task: 3
+Starting Task: 4
+Starting Task: 5
+Starting Task: 6
+Starting Task: 7
+Starting Task: 8
+Starting Task: 9
+Starting Task: 10
+Starting Task: 11
+Starting Task: 13
+Starting Task: 1
+Longest sentence length 7
+Longest story length 10
+Average story length 6
+[[ 8 17 16 15  6  0 21]
+ [11  9 16 15  2  0 20]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 16223.1757545
+Training Accuracy: 0.167222222222
+Validation Accuracy: 0.158
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 1.31645719567
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 0.508514099638
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 0.383434047457
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 0.323929391976
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 0.294151842885
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 0.280558851722
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 0.27126959493
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 0.265579931816
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 0.262692601187
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+Starting Task: 2
+Longest sentence length 7
+Longest story length 88
+Average story length 15
+[[19 11 26 20 27  0 37]
+ [15 21 28 26  4  0 36]
+ [25 32  2 28 26 17 35]
+ [19 30 28 26 13  0 34]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 16253.3965874
+Training Accuracy: 0.176444444444
+Validation Accuracy: 0.182
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 16151.4336128
+Training Accuracy: 0.176
+Validation Accuracy: 0.171
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 16152.8440628
+Training Accuracy: 0.161
+Validation Accuracy: 0.165
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 16131.6756401
+Training Accuracy: 0.176
+Validation Accuracy: 0.171
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 16113.4926834
+Training Accuracy: 0.172111111111
+Validation Accuracy: 0.18
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 16116.8192215
+Training Accuracy: 0.176444444444
+Validation Accuracy: 0.182
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 16109.6281319
+Training Accuracy: 0.172111111111
+Validation Accuracy: 0.18
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 16104.3862686
+Training Accuracy: 0.177111111111
+Validation Accuracy: 0.183
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 16103.7616119
+Training Accuracy: 0.176
+Validation Accuracy: 0.171
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 16100.4591446
+Training Accuracy: 0.176
+Validation Accuracy: 0.171
+-----------------------
+Starting Task: 3
+Longest sentence length 8
+Longest story length 320
+Average story length 51
+[[19 12 26 20  0  0  0 72]
+ [15 21 28 26  4  0  0 71]
+ [ 6 16 28 26 22  0  0 70]
+ [15 13 26  1 27  0  0 69]
+ [15 12 26 10  0  0  0 68]
+ [15 16 28 26 11  0  0 67]
+ [19 18 26 20  0  0  0 66]
+ [15 18 26 10  0  0  0 65]
+ [ 6 21 28 26 11  0  0 64]
+ [ 6 13 26 10  0  0  0 63]
+ [19 21 28 26 14  0  0 62]
+ [19 33 28 26 17  0  0 61]
+ [15 24  8 26  1 27  0 60]
+ [15 23 31 26  1  0  0 59]
+ [25 21 28 26 14  0  0 58]
+ [ 6 18 26 10 27  0  0 57]
+ [ 6 29 26 10  0  0  0 56]
+ [15 30 28 26 17  0  0 55]
+ [ 6  9 26 10  0  0  0 54]
+ [15  9 26  1  0  0  0 53]
+ [15 13 26  1  0  0  0 52]
+ [15 33 28 26 22  0  0 51]
+ [25 33  2 28 26  4  0 50]
+ [25 29 26 20  0  0  0 49]
+ [15 16 28 26  3  0  0 48]
+ [15 30 28 26 22  0  0 47]
+ [25 18 26 20  0  0  0 46]
+ [19 33 28 26  4  0  0 45]
+ [19 21 28 26 22  0  0 44]
+ [15 30 28 26 14  0  0 43]
+ [25 21 28 26 11  0  0 42]
+ [19 21 28 26 17  0  0 41]
+ [ 6 29 26 10  0  0  0 40]
+ [19 16 28 26  4  0  0 39]
+ [19 13 26 20 27  0  0 38]
+ [19  7 26 20  0  0  0 37]
+ [15 33 28 26 11  0  0 36]
+ [15  7 26  1 27  0  0 35]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 8)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 8, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 16211.3532372
+Training Accuracy: 0.163444444444
+Validation Accuracy: 0.146
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 15119.6305351
+Training Accuracy: 0.224333333333
+Validation Accuracy: 0.207
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 13489.6915092
+Training Accuracy: 0.401
+Validation Accuracy: 0.345
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 12173.1437607
+Training Accuracy: 0.421333333333
+Validation Accuracy: 0.376
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 10548.8932533
+Training Accuracy: 0.573555555556
+Validation Accuracy: 0.54
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 6215.31574059
+Training Accuracy: 0.759666666667
+Validation Accuracy: 0.735
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 4203.86617994
+Training Accuracy: 0.848666666667
+Validation Accuracy: 0.811
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 3249.13546062
+Training Accuracy: 0.876555555556
+Validation Accuracy: 0.853
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 2980.67322874
+Training Accuracy: 0.892555555556
+Validation Accuracy: 0.867
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 2681.69979429
+Training Accuracy: 0.903888888889
+Validation Accuracy: 0.861
+-----------------------
+Starting Task: 4
+Longest sentence length 8
+Longest story length 2
+Average story length 2
+[[12  5  6  3  9 12  1 16]
+ [12  2  6 13  9 12  1 15]]
+Training set shape (9000, 2, 8)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 8, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 1696.98902538
+Training Accuracy: 0.986777777778
+Validation Accuracy: 0.987
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 0.706464434043
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 0.430326560978
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 0.35654405487
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 0.316083091166
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 0.294648719515
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 0.284542993119
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 0.27748891621
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 0.273119087535
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 0.270833865536
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+Starting Task: 5
+Longest sentence length 8
+Longest story length 126
+Average story length 20
+[[11 28 36 31 10 32  0 41]
+ [11 13 31 10 33 19  0 40]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 8)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 8, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 11686.132534
+Training Accuracy: 0.324111111111
+Validation Accuracy: 0.306
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 8420.76778984
+Training Accuracy: 0.500888888889
+Validation Accuracy: 0.522
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 2429.58492994
+Training Accuracy: 0.894222222222
+Validation Accuracy: 0.893
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 795.778078929
+Training Accuracy: 0.989222222222
+Validation Accuracy: 0.984
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 385.069443814
+Training Accuracy: 0.994666666667
+Validation Accuracy: 0.99
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 290.82268244
+Training Accuracy: 0.995555555556
+Validation Accuracy: 0.994
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 233.505432151
+Training Accuracy: 0.995777777778
+Validation Accuracy: 0.992
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 198.658232473
+Training Accuracy: 0.996444444444
+Validation Accuracy: 0.991
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 182.213970389
+Training Accuracy: 0.996333333333
+Validation Accuracy: 0.989
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 180.364420675
+Training Accuracy: 0.996666666667
+Validation Accuracy: 0.991
+-----------------------
+Starting Task: 6
+Longest sentence length 7
+Longest story length 26
+Average story length 6
+[[20 11 28 21 29  0 37]
+ [16 22 30 28  4  0 36]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 26, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 6321.29563904
+Training Accuracy: 0.5
+Validation Accuracy: 0.512
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 6260.38513565
+Training Accuracy: 0.5
+Validation Accuracy: 0.512
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 6256.59304619
+Training Accuracy: 0.5
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 6242.53528404
+Training Accuracy: 0.5
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 6240.17417908
+Training Accuracy: 0.5
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 6240.37178421
+Training Accuracy: 0.5
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 6236.48842812
+Training Accuracy: 0.5
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 6234.99424362
+Training Accuracy: 0.5
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 6235.11984825
+Training Accuracy: 0.5
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 6234.09750938
+Training Accuracy: 0.510666666667
+Validation Accuracy: 0.507
+-----------------------
+Starting Task: 7
+Longest sentence length 7
+Longest story length 52
+Average story length 8
+[[24 13 35 25 36  0 45]
+ [19 26 38 35  4  0 44]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 7750.95565414
+Training Accuracy: 0.487777777778
+Validation Accuracy: 0.478
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 7653.24988174
+Training Accuracy: 0.487777777778
+Validation Accuracy: 0.478
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 7656.27030182
+Training Accuracy: 0.507333333333
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 7634.83690262
+Training Accuracy: 0.487777777778
+Validation Accuracy: 0.478
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 7620.27241135
+Training Accuracy: 0.487777777778
+Validation Accuracy: 0.478
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 7622.38201714
+Training Accuracy: 0.469666666667
+Validation Accuracy: 0.475
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 7604.76077652
+Training Accuracy: 0.468555555556
+Validation Accuracy: 0.472
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 7581.2463398
+Training Accuracy: 0.493666666667
+Validation Accuracy: 0.466
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 7541.0002861
+Training Accuracy: 0.528444444444
+Validation Accuracy: 0.528
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 7450.72255707
+Training Accuracy: 0.535555555556
+Validation Accuracy: 0.524
+-----------------------
+Starting Task: 8
+Longest sentence length 7
+Longest story length 58
+Average story length 8
+[[28 20 40 29 41  0 49]
+ [24 34 42 40  8  0 48]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 14809.9811134
+Training Accuracy: 0.192555555556
+Validation Accuracy: 0.155
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 14682.5440826
+Training Accuracy: 0.364111111111
+Validation Accuracy: 0.343
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 14672.23423
+Training Accuracy: 0.364111111111
+Validation Accuracy: 0.343
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 14633.6513596
+Training Accuracy: 0.364111111111
+Validation Accuracy: 0.343
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 14604.6736374
+Training Accuracy: 0.364111111111
+Validation Accuracy: 0.343
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 14577.3083954
+Training Accuracy: 0.364111111111
+Validation Accuracy: 0.343
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 14374.4338417
+Training Accuracy: 0.391444444444
+Validation Accuracy: 0.357
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 9645.66922951
+Training Accuracy: 0.669555555556
+Validation Accuracy: 0.696
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 7148.60229015
+Training Accuracy: 0.761333333333
+Validation Accuracy: 0.755
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 5643.16236973
+Training Accuracy: 0.811888888889
+Validation Accuracy: 0.818
+-----------------------
+Starting Task: 9
+Longest sentence length 8
+Longest story length 10
+Average story length 6
+[[ 9  8  7 19  6  0  0 25]
+ [18  8  7 19 11  0  0 24]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 8)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 8, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 6059.51309967
+Training Accuracy: 0.622777777778
+Validation Accuracy: 0.648
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 5983.73236465
+Training Accuracy: 0.622777777778
+Validation Accuracy: 0.648
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 5984.47020626
+Training Accuracy: 0.622777777778
+Validation Accuracy: 0.648
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 5905.48025131
+Training Accuracy: 0.622777777778
+Validation Accuracy: 0.648
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 5648.53373241
+Training Accuracy: 0.628888888889
+Validation Accuracy: 0.641
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 5607.39207172
+Training Accuracy: 0.632444444444
+Validation Accuracy: 0.594
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 5567.89087009
+Training Accuracy: 0.631111111111
+Validation Accuracy: 0.603
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 5533.94642067
+Training Accuracy: 0.629111111111
+Validation Accuracy: 0.657
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 5499.92060852
+Training Accuracy: 0.641555555556
+Validation Accuracy: 0.615
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 5446.70982552
+Training Accuracy: 0.644888888889
+Validation Accuracy: 0.616
+-----------------------
+Starting Task: 10
+Longest sentence length 10
+Longest story length 10
+Average story length 6
+[[12  8  7 20 19  0  0  0  0 26]
+ [ 3  8  7 20 11  0  0  0  0 25]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 10)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 10, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 9095.70074272
+Training Accuracy: 0.477222222222
+Validation Accuracy: 0.458
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 6888.5282917
+Training Accuracy: 0.494333333333
+Validation Accuracy: 0.491
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 6429.76164055
+Training Accuracy: 0.499111111111
+Validation Accuracy: 0.531
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 6212.21546364
+Training Accuracy: 0.547444444444
+Validation Accuracy: 0.533
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 6106.29500008
+Training Accuracy: 0.560111111111
+Validation Accuracy: 0.51
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 6083.60932922
+Training Accuracy: 0.549777777778
+Validation Accuracy: 0.52
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 6027.82289505
+Training Accuracy: 0.567222222222
+Validation Accuracy: 0.51
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 5999.79770279
+Training Accuracy: 0.572222222222
+Validation Accuracy: 0.536
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 5988.75475121
+Training Accuracy: 0.576444444444
+Validation Accuracy: 0.535
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 5965.65275192
+Training Accuracy: 0.579777777778
+Validation Accuracy: 0.526
+-----------------------
+Starting Task: 11
+Longest sentence length 9
+Longest story length 10
+Average story length 6
+[[12 13 23 21  9  0  0  0 28]
+ [ 1 20 10 13 23 21  8  0 27]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 9)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 9, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 16245.865387
+Training Accuracy: 0.170222222222
+Validation Accuracy: 0.169
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 3340.84023583
+Training Accuracy: 0.838333333333
+Validation Accuracy: 0.833
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 2848.60049546
+Training Accuracy: 0.886111111111
+Validation Accuracy: 0.875
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 2477.69451582
+Training Accuracy: 0.890888888889
+Validation Accuracy: 0.883
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 2163.05550206
+Training Accuracy: 0.905777777778
+Validation Accuracy: 0.885
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 1975.59844387
+Training Accuracy: 0.919222222222
+Validation Accuracy: 0.901
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 1588.56635991
+Training Accuracy: 0.932888888889
+Validation Accuracy: 0.912
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 1456.55159152
+Training Accuracy: 0.936666666667
+Validation Accuracy: 0.915
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 1406.2264156
+Training Accuracy: 0.936888888889
+Validation Accuracy: 0.913
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 1368.93767974
+Training Accuracy: 0.939111111111
+Validation Accuracy: 0.917
+-----------------------
+Starting Task: 12
+Longest sentence length 9
+Longest story length 10
+Average story length 6
+[[ 9  1 12 18 17 16  7  0 22]
+ [15  1 12 10 17 16  4  0 21]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 9)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 9, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 16222.78582
+Training Accuracy: 0.169444444444
+Validation Accuracy: 0.153
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 6871.33702564
+Training Accuracy: 0.738222222222
+Validation Accuracy: 0.714
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 6518.14966011
+Training Accuracy: 0.743111111111
+Validation Accuracy: 0.721
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 6219.59134102
+Training Accuracy: 0.742666666667
+Validation Accuracy: 0.717
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 6113.17266369
+Training Accuracy: 0.745
+Validation Accuracy: 0.718
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 983.294347823
+Training Accuracy: 0.996777777778
+Validation Accuracy: 0.995
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 7.53769889381
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 4.18834953522
+Training Accuracy: 1.0
+Validation Accuracy: 0.997
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 3.28579986002
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 2.93787106965
+Training Accuracy: 1.0
+Validation Accuracy: 0.997
+-----------------------
+Starting Task: 13
+Longest sentence length 9
+Longest story length 10
+Average story length 6
+[[12  3 15 25  4 23 20 10 28]
+ [21 22 25 23 20  5  0  0 27]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 9)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 9, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 16245.064785
+Training Accuracy: 0.172333333333
+Validation Accuracy: 0.163
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 2199.68772209
+Training Accuracy: 0.936666666667
+Validation Accuracy: 0.943
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 2037.49423301
+Training Accuracy: 0.932
+Validation Accuracy: 0.937
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 1894.88994884
+Training Accuracy: 0.937333333333
+Validation Accuracy: 0.943
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 1823.68564796
+Training Accuracy: 0.937333333333
+Validation Accuracy: 0.943
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 1808.53502297
+Training Accuracy: 0.938
+Validation Accuracy: 0.943
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 1767.70408773
+Training Accuracy: 0.937888888889
+Validation Accuracy: 0.943
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 1741.55627012
+Training Accuracy: 0.938
+Validation Accuracy: 0.943
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 1735.92424262
+Training Accuracy: 0.937888888889
+Validation Accuracy: 0.943
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 1719.76696849
+Training Accuracy: 0.938
+Validation Accuracy: 0.943
+-----------------------
+Starting Task: 14
+Longest sentence length 9
+Longest story length 14
+Average story length 7
+[[19 13 12 14 20 18 11  0 29]
+ [19  1 12 14 20 18  6  0 28]
+ [25  5 23 20 18  3  0  0 27]
+ [25 12  9 20 18 17  0  0 26]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]]
+Training set shape (9000, 14, 9)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 9, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 16233.976593
+Training Accuracy: 0.183222222222
+Validation Accuracy: 0.189
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 14761.0640106
+Training Accuracy: 0.356666666667
+Validation Accuracy: 0.342
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 5616.25902939
+Training Accuracy: 0.845333333333
+Validation Accuracy: 0.804
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 77.4214932825
+Training Accuracy: 0.999666666667
+Validation Accuracy: 0.999
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 3.08821212011
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 1.96523063909
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 1.65435913356
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 1.48250654107
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 1.38974637422
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 1.34538100939
+Training Accuracy: 1.0
+Validation Accuracy: 0.998
+-----------------------
+Starting Task: 15
+Longest sentence length 6
+Longest story length 8
+Average story length 8
+[[17  3  2 12 10 25]
+ [13  3  2 12 10 24]
+ [15  8  1 13  0 23]
+ [10  3  2 12  5 22]
+ [ 5  3  2 12 17 21]
+ [ 9  8  1 11  0 20]
+ [ 6  8  1  4  0 19]
+ [ 7  8  1 16  0 18]]
+Training set shape (9000, 8, 6)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 6, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 10091.3535538
+Training Accuracy: 0.545777777778
+Validation Accuracy: 0.558
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 8104.53442955
+Training Accuracy: 0.578444444444
+Validation Accuracy: 0.581
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 4536.88615751
+Training Accuracy: 0.800666666667
+Validation Accuracy: 0.795
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 2888.20424843
+Training Accuracy: 0.860777777778
+Validation Accuracy: 0.859
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 2504.0082134
+Training Accuracy: 0.869333333333
+Validation Accuracy: 0.861
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 2473.42996931
+Training Accuracy: 0.872555555556
+Validation Accuracy: 0.87
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 2355.37570274
+Training Accuracy: 0.869333333333
+Validation Accuracy: 0.861
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 2280.98056006
+Training Accuracy: 0.874333333333
+Validation Accuracy: 0.868
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 2266.63178468
+Training Accuracy: 0.880555555556
+Validation Accuracy: 0.868
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 2198.10979986
+Training Accuracy: 0.879777777778
+Validation Accuracy: 0.865
+-----------------------
+Starting Task: 16
+Longest sentence length 5
+Longest story length 9
+Average story length 9
+[[11  9  1 14 26]
+ [ 2  9  1 12 25]
+ [ 8  9  1 14 24]
+ [ 2  9 16  0 23]
+ [ 3  9  1 12 22]
+ [11  9  6  0 21]
+ [10  9  1 13 20]
+ [10  9  6  0 19]
+ [ 8  9  6  0 18]]
+Training set shape (9000, 9, 5)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 5, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 10966.4303875
+Training Accuracy: 0.435666666667
+Validation Accuracy: 0.434
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 8739.84576607
+Training Accuracy: 0.482
+Validation Accuracy: 0.44
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 8292.29955673
+Training Accuracy: 0.473
+Validation Accuracy: 0.45
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 8055.03069687
+Training Accuracy: 0.487222222222
+Validation Accuracy: 0.44
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 7962.87317657
+Training Accuracy: 0.508888888889
+Validation Accuracy: 0.45
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 7948.93753624
+Training Accuracy: 0.498333333333
+Validation Accuracy: 0.453
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 7892.14492989
+Training Accuracy: 0.500555555556
+Validation Accuracy: 0.459
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 7863.77658653
+Training Accuracy: 0.508666666667
+Validation Accuracy: 0.445
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 7855.34236336
+Training Accuracy: 0.507444444444
+Validation Accuracy: 0.456
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 7837.17715454
+Training Accuracy: 0.516111111111
+Validation Accuracy: 0.452
+-----------------------
+Starting Task: 17
+Longest sentence length 12
+Longest story length 2
+Average story length 2
+[[14  8  9  4 15 14  5  7 14 16  0 20]
+ [14 16  4 15 14  5  7 14 10 13  0 19]]
+Training set shape (9000, 2, 12)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 12, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_10/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_11/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_11/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_11/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_11/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 6301.30622101
+Training Accuracy: 0.505
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 6262.50983238
+Training Accuracy: 0.495
+Validation Accuracy: 0.512
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 6252.6292038
+Training Accuracy: 0.495
+Validation Accuracy: 0.512
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 6243.37299538
+Training Accuracy: 0.495
+Validation Accuracy: 0.512
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 6237.69850922
+Training Accuracy: 0.505
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 6239.66355324
+Training Accuracy: 0.505
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 6237.65634918
+Training Accuracy: 0.498444444444
+Validation Accuracy: 0.477
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 6234.4526329
+Training Accuracy: 0.524555555556
+Validation Accuracy: 0.516
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 6233.22572708
+Training Accuracy: 0.505
+Validation Accuracy: 0.488
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 6232.77005959
+Training Accuracy: 0.505
+Validation Accuracy: 0.488
+-----------------------
+Starting Task: 18
+Longest sentence length 10
+Longest story length 20
+Average story length 6
+[[17 15  9 11 17  2  0  0  0 28]
+ [17  4  9 11 17  2  0  0  0 27]
+ [17  6 12  1 16 17  2 14  5 26]
+ [17  6 12  1 16 17 15  0  0 25]
+ [17  2 12  1 16 17  2 14  5 24]
+ [17  6 12  1 16 17  4  0  0 23]
+ [17  4  9 11 17  6  0  0  0 22]
+ [17  4  9 11 17 15  0  0  0 21]
+ [17  4  9 11 17  3  0  0  0 20]
+ [17 15  9 11 17  6  0  0  0 19]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]]
+Training set shape (9000, 20, 10)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 10, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 6303.12219238
+Training Accuracy: 0.498777777778
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 6258.19776917
+Training Accuracy: 0.498777777778
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 6257.88604736
+Training Accuracy: 0.501222222222
+Validation Accuracy: 0.517
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 6211.68771935
+Training Accuracy: 0.498777777778
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 1180.36687967
+Training Accuracy: 0.923222222222
+Validation Accuracy: 0.894
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 1041.51656511
+Training Accuracy: 0.933666666667
+Validation Accuracy: 0.913
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 924.16361405
+Training Accuracy: 0.943
+Validation Accuracy: 0.922
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 851.463626444
+Training Accuracy: 0.949666666667
+Validation Accuracy: 0.924
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 819.149956375
+Training Accuracy: 0.949777777778
+Validation Accuracy: 0.926
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 776.702215761
+Training Accuracy: 0.954222222222
+Validation Accuracy: 0.928
+-----------------------
+Starting Task: 19
+Longest sentence length 11
+Longest story length 5
+Average story length 5
+[[25  9 13 30 19 25  1  0  0  0 36]
+ [25  2 13 18 19 25 11  0  0  0 35]
+ [25 20 13 24 19 25 11  0  0  0 34]
+ [25  1 13 18 19 25  2  0  0  0 33]
+ [25 14 13  7 19 25  2  0  0  0 32]]
+Training set shape (9000, 5, 11)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 11, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_8/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_9/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_10/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_10/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_10/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_10/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 22499.7562866
+Training Accuracy: 0.0843333333333
+Validation Accuracy: 0.085
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 22412.4652634
+Training Accuracy: 0.0826666666667
+Validation Accuracy: 0.098
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 22403.3022766
+Training Accuracy: 0.0871111111111
+Validation Accuracy: 0.081
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 22375.4841461
+Training Accuracy: 0.0871111111111
+Validation Accuracy: 0.081
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 22363.2440338
+Training Accuracy: 0.0895555555556
+Validation Accuracy: 0.082
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 22362.5602798
+Training Accuracy: 0.0916666666667
+Validation Accuracy: 0.082
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 22352.8095703
+Training Accuracy: 0.0871111111111
+Validation Accuracy: 0.081
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 22343.8438263
+Training Accuracy: 0.0861111111111
+Validation Accuracy: 0.085
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 22344.9495087
+Training Accuracy: 0.0853333333333
+Validation Accuracy: 0.085
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 22340.8610382
+Training Accuracy: 0.0925555555556
+Validation Accuracy: 0.084
+-----------------------
+Starting Task: 20
+Longest sentence length 8
+Longest story length 12
+Average story length 5
+[[15 14 25  0  0  0  0 36]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]]
+Training set shape (9000, 12, 8)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 8, 30), dtype=float32)
+([<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_1/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_2/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_3/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_4/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_5/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_6/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/mul_2:0' shape=(?, 30) dtype=float32>], (<tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_0/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_1/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>, <tf.Tensor 'MemN2N_1/encoder/rnn/multi_rnn_cell_7/cell_2/basic_lstm_cell/concat:0' shape=(?, 60) dtype=float32>))
+Tensor("MemN2N_1/Sum:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+-----------------------
+Epoch 10
+Total Cost: 3.30821482558
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 1.05029415723
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 0.718109500827
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 0.611870025168
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 0.551277581137
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 0.518182560976
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 0.501991018944
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 0.490661684889
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 0.483682176215
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 0.479990099848
+Training Accuracy: 1.0
+Validation Accuracy: 1.0
+-----------------------

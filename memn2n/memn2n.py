@@ -127,16 +127,29 @@ class MemN2N(object):
         tf.summary.scalar('loss', loss_op)
 
         # gradient pipeline
-        grads_and_vars = self._opt.compute_gradients(loss_op)
-        grads_and_vars = [(tf.clip_by_norm(g, self._max_grad_norm), v) for g,v in grads_and_vars]
-        grads_and_vars = [(add_gradient_noise(g), v) for g,v in grads_and_vars]
-        nil_grads_and_vars = []
-        for g, v in grads_and_vars:
-            if v.name in self._nil_vars:
-                nil_grads_and_vars.append((zero_nil_slot(g), v))
-            else:
-                nil_grads_and_vars.append((g, v))
-        train_op = self._opt.apply_gradients(nil_grads_and_vars, name="train_op")
+        #grads_and_vars = self._opt.compute_gradients(loss_op)
+        #grads_and_vars = [(tf.clip_by_norm(g, self._max_grad_norm), v) for g,v in grads_and_vars]
+        #grads_and_vars = [(add_gradient_noise(g), v) for g,v in grads_and_vars]
+        #nil_grads_and_vars = []
+        #for g, v in grads_and_vars:
+        #    if v.name in self._nil_vars:
+        #        nil_grads_and_vars.append((zero_nil_slot(g), v))
+        #    else:
+        #        nil_grads_and_vars.append((g, v))
+       # train_op = self._opt.apply_gradients(nil_grads_and_vars, name="train_op")
+
+        #gradients = tf.gradients(cost, tf.trainable_variables())
+        # take gradients of cosst w.r.t. all trainable variables
+        #clipped_gradients, _ = tf.clip_by_global_norm(gradients, max_grad_norm)
+        # clip the gradients by a pre-defined max norm
+        #optimizer = tf.train.AdamOptimizer(learning_rate)
+        #train_op = optimizer.apply_gradients(zip(gradients, trainables))
+
+        tvars = tf.trainable_variables()
+        print(tvars)
+        grads, _ = tf.clip_by_global_norm(tf.gradients(loss_op, tvars),
+                                          max_grad_norm)
+        train_op = self._opt.apply_gradients(zip(grads, tvars))
 
         # predict ops
         predict_op = tf.argmax(logits, 1, name="predict_op")
@@ -185,9 +198,11 @@ class MemN2N(object):
             # self.H = tf.Variable(self._init([self._embedding_size, self._embedding_size]), name="H")
 
             # Use final C as replacement for W
-            self.W = tf.Variable(tf.concat(axis=0, values=[tf.zeros([1, self._embedding_size *2 ]), self._init([self._vocab_size - 1, self._embedding_size *2 ])]), name="W")
+            self.W = tf.Variable(tf.concat(axis=0, values=[tf.zeros([1, self._embedding_size * 2]), self._init([self._vocab_size - 1, self._embedding_size *2])]), name="W")
 
-        self._nil_vars = set([self.A_1.name] + [x.name for x in self.C])
+        self._nil_vars = set([self.A_1.name] + [x.name for x in self.C] + [self.W])
+        # Define weights
+
 
     def _inference(self, stories, queries):
         with tf.variable_scope(self._name):
@@ -197,13 +212,18 @@ class MemN2N(object):
             x = tf.unstack(q_emb, q_emb.shape[1], 1)
 
             with tf.variable_scope("encoder", reuse=False):
-                lstm_cell = tf.contrib.rnn.BasicLSTMCell(self._embedding_size, forget_bias=1.0)
-                _, state_queries = rnn.static_rnn(lstm_cell, x, dtype=tf.float32)
+                #with tf.variable_scope("encoder", reuse=False):
+                #stacked_lstm = tf.contrib.rnn.MultiRNNCell(
+                #    [tf.contrib.rnn.BasicLSTMCell(int(self._embedding_size), forget_bias=1.0, state_is_tuple=True) for _ in range(1)])
+                stacked_lstm = tf.contrib.rnn.BasicLSTMCell(int(self._embedding_size), forget_bias=1.0, state_is_tuple=True)
+                stacked_lstm = tf.contrib.rnn.DropoutWrapper(stacked_lstm, output_keep_prob=0.6)
+                out, hidden = rnn.static_rnn(stacked_lstm, x,  dtype=tf.float32)
 
             print(q_emb)
-            print(tf.reduce_sum(q_emb, 1))
-            u_0 = state_queries[0]
-            u_0 = tf.concat([state_queries[0], tf.reduce_sum(q_emb, 1)], axis = 1)
+            print(hidden)
+            u_0 = tf.concat([hidden[0], hidden[-1]], axis = 1)
+
+            #u_0 = tf.concat([state_queries[0], tf.reduce_sum(q_emb, 1)], axis = 1)
 
             #u_0 = tf.reduce_sum(q_emb * self._encoding, 1)
             u = [u_0]
@@ -226,11 +246,12 @@ class MemN2N(object):
 
                 for y_1 in y:
                     with tf.variable_scope("encoder", reuse=True):
-                        _, state_story = rnn.static_rnn(lstm_cell, y_1, dtype=tf.float32)
-                        state_stories.append(state_story[0])
+                        out, hidden = rnn.static_rnn(stacked_lstm, y_1, dtype=tf.float32)
+                        #state_stories.append(tf.reduce_sum(out[-1], 0))
+                        state_stories.append(tf.concat([hidden[0], hidden[-1]], axis = 1))
 
                 m_A = tf.stack(state_stories, axis=1)
-                m_A = tf.concat([m_A, tf.reduce_sum(m_emb_A, 2)], axis=2)
+                #m_A = tf.concat([m_A, tf.reduce_sum(m_emb_A, 2)], axis=2)
 
                 # hack to get around no reduce_dot
                 u_temp = tf.transpose(tf.expand_dims(u[-1], -1), [0, 2, 1])
@@ -250,12 +271,14 @@ class MemN2N(object):
 
                 for y_1 in y:
                    with tf.variable_scope("encoder", reuse=True):
-                        _, state_story = rnn.static_rnn(lstm_cell, y_1, dtype=tf.float32)
-                        state_stories.append(state_story[0])
+                        out, hidden = rnn.static_rnn(stacked_lstm, y_1, dtype=tf.float32)
+                        state_stories.append(tf.concat([hidden[0], hidden[-1]], axis = 1))
+                        #_, state_story = rnn.static_rnn(lstm_cell, y_1, dtype=tf.float32)
+                        #state_stories.append(state_story[0])
 
                 m_C = tf.stack(state_stories, axis=1)
                 # m_C = tf.reduce_sum(m_emb_C * self._encoding, 2)
-                m_C = tf.concat([m_C, tf.reduce_sum(m_emb_C, 2)], axis=2)
+                # m_C = tf.concat([m_C, tf.reduce_sum(m_emb_C, 2)], axis=2)
 
                 c_temp = tf.transpose(m_C, [0, 2, 1])
                 o_k = tf.reduce_sum(c_temp * probs_temp, 2)

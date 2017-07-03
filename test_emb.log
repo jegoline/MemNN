@@ -1,0 +1,971 @@
+Starting Task: 5
+/usr/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Longest sentence length 8
+Longest story length 126
+Average story length 20
+[[11 28 36 31 10 32  0 41]
+ [11 13 31 10 33 19  0 40]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 8)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 8, 30), dtype=float32)
+LSTMStateTuple(c=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_7/add_1:0' shape=(?, 30) dtype=float32>, h=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_7/mul_2:0' shape=(?, 30) dtype=float32>)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+[<tf.Variable 'MemN2N/A:0' shape=(90, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_0/C:0' shape=(90, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_1/C:0' shape=(90, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_2/C:0' shape=(90, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/W:0' shape=(90, 60) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/weights:0' shape=(60, 120) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/biases:0' shape=(120,) dtype=float32_ref>]
+-----------------------
+Epoch 10
+Total Cost: 8510.17484856
+Training Accuracy: 0.517111111111
+Validation Accuracy: 0.518
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 4517.43951941
+Training Accuracy: 0.798
+Validation Accuracy: 0.809
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 1870.00104058
+Training Accuracy: 0.924444444444
+Validation Accuracy: 0.926
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 1246.78419948
+Training Accuracy: 0.946333333333
+Validation Accuracy: 0.938
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 1052.89969686
+Training Accuracy: 0.955555555556
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 975.036372587
+Training Accuracy: 0.959111111111
+Validation Accuracy: 0.946
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 927.937258422
+Training Accuracy: 0.961
+Validation Accuracy: 0.953
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 910.774426743
+Training Accuracy: 0.962
+Validation Accuracy: 0.95
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 901.336886853
+Training Accuracy: 0.961666666667
+Validation Accuracy: 0.949
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 895.607452556
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 110
+Total Cost: 893.1158216
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 120
+Total Cost: 892.112066388
+Training Accuracy: 0.961777777778
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 130
+Total Cost: 890.589870632
+Training Accuracy: 0.962
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 140
+Total Cost: 889.388197333
+Training Accuracy: 0.962
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 150
+Total Cost: 888.19832471
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 160
+Total Cost: 887.196333289
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 170
+Total Cost: 886.155510336
+Training Accuracy: 0.961777777778
+Validation Accuracy: 0.952
+-----------------------
+-----------------------
+Epoch 180
+Total Cost: 885.181938127
+Training Accuracy: 0.962111111111
+Validation Accuracy: 0.952
+-----------------------
+-----------------------
+Epoch 190
+Total Cost: 884.322281763
+Training Accuracy: 0.961777777778
+Validation Accuracy: 0.952
+-----------------------
+-----------------------
+Epoch 200
+Total Cost: 883.256616652
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.952
+-----------------------
+-----------------------
+Epoch 210
+Total Cost: 881.832515895
+Training Accuracy: 0.961777777778
+Validation Accuracy: 0.954
+-----------------------
+-----------------------
+Epoch 220
+Total Cost: 880.983846262
+Training Accuracy: 0.962444444444
+Validation Accuracy: 0.951
+-----------------------
+-----------------------
+Epoch 230
+Total Cost: 879.947974756
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.954
+-----------------------
+-----------------------
+Epoch 240
+Total Cost: 878.957104236
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.955
+-----------------------
+-----------------------
+Epoch 250
+Total Cost: 878.073482141
+Training Accuracy: 0.962111111111
+Validation Accuracy: 0.955
+-----------------------
+-----------------------
+Epoch 260
+Total Cost: 876.901837736
+Training Accuracy: 0.962
+Validation Accuracy: 0.955
+-----------------------
+-----------------------
+Epoch 270
+Total Cost: 876.114189655
+Training Accuracy: 0.961666666667
+Validation Accuracy: 0.955
+-----------------------
+-----------------------
+Epoch 280
+Total Cost: 875.060435697
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.955
+-----------------------
+-----------------------
+Epoch 290
+Total Cost: 873.918144017
+Training Accuracy: 0.961888888889
+Validation Accuracy: 0.955
+-----------------------
+-----------------------
+Epoch 300
+Total Cost: 872.977528363
+Training Accuracy: 0.961777777778
+Validation Accuracy: 0.955
+-----------------------
+
+
+Starting Task: 6
+/usr/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Longest sentence length 7
+Longest story length 26
+Average story length 6
+[[20 11 28 21 29  0 37]
+ [16 22 30 28  4  0 36]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 26, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+LSTMStateTuple(c=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_6/add_1:0' shape=(?, 30) dtype=float32>, h=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_6/mul_2:0' shape=(?, 30) dtype=float32>)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+[<tf.Variable 'MemN2N/A:0' shape=(62, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_0/C:0' shape=(62, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_1/C:0' shape=(62, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_2/C:0' shape=(62, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/W:0' shape=(62, 60) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/weights:0' shape=(60, 120) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/biases:0' shape=(120,) dtype=float32_ref>]
+-----------------------
+Epoch 10
+Total Cost: 6307.68572807
+Training Accuracy: 0.498444444444
+Validation Accuracy: 0.502
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 6263.2310791
+Training Accuracy: 0.501555555556
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 6250.03306389
+Training Accuracy: 0.501555555556
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 6241.04093361
+Training Accuracy: 0.501555555556
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 6238.02186584
+Training Accuracy: 0.501555555556
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 6235.12392426
+Training Accuracy: 0.501555555556
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 6234.28421402
+Training Accuracy: 0.501555555556
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 6233.80955124
+Training Accuracy: 0.502444444444
+Validation Accuracy: 0.5
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 6233.13418007
+Training Accuracy: 0.500888888889
+Validation Accuracy: 0.51
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 6232.93853378
+Training Accuracy: 0.507
+Validation Accuracy: 0.504
+-----------------------
+-----------------------
+Epoch 110
+Total Cost: 6232.80682945
+Training Accuracy: 0.508888888889
+Validation Accuracy: 0.497
+-----------------------
+-----------------------
+Epoch 120
+Total Cost: 6232.77511024
+Training Accuracy: 0.509222222222
+Validation Accuracy: 0.495
+-----------------------
+-----------------------
+Epoch 130
+Total Cost: 6232.79325294
+Training Accuracy: 0.506333333333
+Validation Accuracy: 0.505
+-----------------------
+-----------------------
+Epoch 140
+Total Cost: 6232.78408813
+Training Accuracy: 0.505222222222
+Validation Accuracy: 0.5
+-----------------------
+-----------------------
+Epoch 150
+Total Cost: 6232.77945709
+Training Accuracy: 0.506555555556
+Validation Accuracy: 0.498
+-----------------------
+-----------------------
+Epoch 160
+Total Cost: 6232.77089882
+Training Accuracy: 0.506
+Validation Accuracy: 0.505
+-----------------------
+
+Starting Task: 7
+/usr/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Longest sentence length 7
+Longest story length 52
+Average story length 8
+[[24 13 35 25 36  0 45]
+ [19 26 38 35  4  0 44]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+LSTMStateTuple(c=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_6/add_1:0' shape=(?, 30) dtype=float32>, h=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_6/mul_2:0' shape=(?, 30) dtype=float32>)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+[<tf.Variable 'MemN2N/A:0' shape=(94, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_0/C:0' shape=(94, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_1/C:0' shape=(94, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_2/C:0' shape=(94, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/W:0' shape=(94, 60) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/weights:0' shape=(60, 120) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/biases:0' shape=(120,) dtype=float32_ref>]
+-----------------------
+Epoch 10
+Total Cost: 7722.69199181
+Training Accuracy: 0.547444444444
+Validation Accuracy: 0.559
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 4847.93451929
+Training Accuracy: 0.789666666667
+Validation Accuracy: 0.809
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 4631.94629383
+Training Accuracy: 0.799444444444
+Validation Accuracy: 0.824
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 4491.7189393
+Training Accuracy: 0.801
+Validation Accuracy: 0.824
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 4450.60160494
+Training Accuracy: 0.802444444444
+Validation Accuracy: 0.819
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 4400.088449
+Training Accuracy: 0.802555555556
+Validation Accuracy: 0.825
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 4375.87785578
+Training Accuracy: 0.803777777778
+Validation Accuracy: 0.825
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 4368.14101791
+Training Accuracy: 0.803222222222
+Validation Accuracy: 0.828
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 4362.64468813
+Training Accuracy: 0.803888888889
+Validation Accuracy: 0.825
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 4361.54699755
+Training Accuracy: 0.803666666667
+Validation Accuracy: 0.825
+-----------------------
+-----------------------
+Epoch 110
+Total Cost: 4361.89119101
+Training Accuracy: 0.803444444444
+Validation Accuracy: 0.827
+-----------------------
+-----------------------
+Epoch 120
+Total Cost: 4363.4202652
+Training Accuracy: 0.803444444444
+Validation Accuracy: 0.827
+
+Starting Task: 8
+/usr/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Longest sentence length 7
+Longest story length 58
+Average story length 8
+[[28 20 40 29 41  0 49]
+ [24 34 42 40  8  0 48]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0]]
+Training set shape (9000, 50, 7)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 7, 30), dtype=float32)
+LSTMStateTuple(c=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_6/add_1:0' shape=(?, 30) dtype=float32>, h=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_6/mul_2:0' shape=(?, 30) dtype=float32>)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+[<tf.Variable 'MemN2N/A:0' shape=(98, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_0/C:0' shape=(98, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_1/C:0' shape=(98, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_2/C:0' shape=(98, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/W:0' shape=(98, 60) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/weights:0' shape=(60, 120) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/biases:0' shape=(120,) dtype=float32_ref>]
+-----------------------
+Epoch 10
+Total Cost: 14817.2541542
+Training Accuracy: 0.361555555556
+Validation Accuracy: 0.366
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 10331.5970421
+Training Accuracy: 0.548222222222
+Validation Accuracy: 0.554
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 8284.03633118
+Training Accuracy: 0.627
+Validation Accuracy: 0.635
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 7911.44362164
+Training Accuracy: 0.636888888889
+Validation Accuracy: 0.634
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 7755.98966026
+Training Accuracy: 0.626111111111
+Validation Accuracy: 0.618
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 7659.31002617
+Training Accuracy: 0.642555555556
+Validation Accuracy: 0.635
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 7608.86150742
+Training Accuracy: 0.648
+Validation Accuracy: 0.632
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 7580.79155254
+Training Accuracy: 0.644
+Validation Accuracy: 0.638
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 7568.43850613
+Training Accuracy: 0.646555555556
+Validation Accuracy: 0.636
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 7560.87449169
+Training Accuracy: 0.646111111111
+Validation Accuracy: 0.636
+-----------------------
+-----------------------
+Epoch 110
+Total Cost: 7556.91839695
+Training Accuracy: 0.645777777778
+Validation Accuracy: 0.635
+-----------------------
+
+
+Starting Task: 9
+2017-07-03 12:19:50.467623: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-03 12:19:50.467639: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-03 12:19:50.467642: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-03 12:19:50.467645: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-03 12:19:50.467647: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+/usr/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Longest sentence length 8
+Longest story length 10
+Average story length 6
+[[ 9  8  7 19  6  0  0 25]
+ [18  8  7 19 11  0  0 24]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 8)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 8, 30), dtype=float32)
+LSTMStateTuple(c=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_7/add_1:0' shape=(?, 30) dtype=float32>, h=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_7/mul_2:0' shape=(?, 30) dtype=float32>)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+[<tf.Variable 'MemN2N/A:0' shape=(34, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_0/C:0' shape=(34, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_1/C:0' shape=(34, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_2/C:0' shape=(34, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/W:0' shape=(34, 60) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/weights:0' shape=(60, 120) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/biases:0' shape=(120,) dtype=float32_ref>]
+-----------------------
+Epoch 10
+Total Cost: 6025.23266411
+Training Accuracy: 0.623888888889
+Validation Accuracy: 0.638
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 5901.22388935
+Training Accuracy: 0.623888888889
+Validation Accuracy: 0.637
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 5703.86439133
+Training Accuracy: 0.629222222222
+Validation Accuracy: 0.625
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 5645.6338644
+Training Accuracy: 0.625888888889
+Validation Accuracy: 0.624
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 5623.17267036
+Training Accuracy: 0.634666666667
+Validation Accuracy: 0.622
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 5604.40664864
+Training Accuracy: 0.629333333333
+Validation Accuracy: 0.635
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 5598.19948006
+Training Accuracy: 0.634111111111
+Validation Accuracy: 0.613
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 5593.25679493
+Training Accuracy: 0.636222222222
+Validation Accuracy: 0.621
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 5592.1523037
+Training Accuracy: 0.634555555556
+Validation Accuracy: 0.612
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 5590.61756992
+Training Accuracy: 0.635
+Validation Accuracy: 0.613
+-----------------------
+-----------------------
+Epoch 110
+Total Cost: 5589.89459801
+Training Accuracy: 0.633888888889
+Validation Accuracy: 0.611
+-----------------------
+-----------------------
+Epoch 120
+Total Cost: 5589.74655056
+Training Accuracy: 0.634555555556
+Validation Accuracy: 0.61
+-----------------------
+-----------------------
+Epoch 130
+Total Cost: 5589.51535225
+Training Accuracy: 0.634888888889
+Validation Accuracy: 0.614
+-----------------------
+-----------------------
+Epoch 140
+Total Cost: 5589.33155155
+Training Accuracy: 0.635555555556
+Validation Accuracy: 0.611
+-----------------------
+-----------------------
+Epoch 150
+Total Cost: 5589.20776558
+Training Accuracy: 0.635222222222
+Validation Accuracy: 0.615
+-----------------------
+-----------------------
+Epoch 160
+Total Cost: 5589.03514671
+Training Accuracy: 0.635555555556
+Validation Accuracy: 0.612
+-----------------------
+-----------------------
+Epoch 170
+Total Cost: 5588.90010548
+Training Accuracy: 0.634777777778
+Validation Accuracy: 0.611
+-----------------------
+
+Starting Task: 10
+/usr/lib/python3.5/re.py:203: FutureWarning: split() requires a non-empty pattern match.
+  return _compile(pattern, flags).split(string, maxsplit)
+Longest sentence length 10
+Longest story length 10
+Average story length 6
+[[12  8  7 20 19  0  0  0  0 26]
+ [ 3  8  7 20 11  0  0  0  0 25]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0]]
+Training set shape (9000, 10, 10)
+Training Size 9000
+Validation Size 1000
+Testing Size 1000
+Tensor("MemN2N_1/embedding_lookup:0", shape=(?, 10, 30), dtype=float32)
+LSTMStateTuple(c=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_9/add_1:0' shape=(?, 30) dtype=float32>, h=<tf.Tensor 'MemN2N_1/encoder/rnn/basic_lstm_cell_9/mul_2:0' shape=(?, 30) dtype=float32>)
+Tensor("MemN2N_1/add:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_1:0", shape=(?, 60), dtype=float32)
+Tensor("MemN2N_1/add_2:0", shape=(?, 60), dtype=float32)
+[<tf.Variable 'MemN2N/A:0' shape=(35, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_0/C:0' shape=(35, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_1/C:0' shape=(35, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/hop_2/C:0' shape=(35, 30) dtype=float32_ref>, <tf.Variable 'MemN2N/W:0' shape=(35, 60) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/weights:0' shape=(60, 120) dtype=float32_ref>, <tf.Variable 'MemN2N/encoder/rnn/basic_lstm_cell/biases:0' shape=(120,) dtype=float32_ref>]
+-----------------------
+Epoch 10
+Total Cost: 8260.25976562
+Training Accuracy: 0.481
+Validation Accuracy: 0.475
+-----------------------
+-----------------------
+Epoch 20
+Total Cost: 8080.76792908
+Training Accuracy: 0.478888888889
+Validation Accuracy: 0.491
+-----------------------
+-----------------------
+Epoch 30
+Total Cost: 8030.67534637
+Training Accuracy: 0.485888888889
+Validation Accuracy: 0.469
+-----------------------
+-----------------------
+Epoch 40
+Total Cost: 8007.16832733
+Training Accuracy: 0.487777777778
+Validation Accuracy: 0.474
+-----------------------
+-----------------------
+Epoch 50
+Total Cost: 7990.68465424
+Training Accuracy: 0.483
+Validation Accuracy: 0.484
+-----------------------
+-----------------------
+Epoch 60
+Total Cost: 7983.51735687
+Training Accuracy: 0.49
+Validation Accuracy: 0.479
+-----------------------
+-----------------------
+Epoch 70
+Total Cost: 7977.16099167
+Training Accuracy: 0.489555555556
+Validation Accuracy: 0.484
+-----------------------
+-----------------------
+Epoch 80
+Total Cost: 7974.12578011
+Training Accuracy: 0.489444444444
+Validation Accuracy: 0.491
+-----------------------
+-----------------------
+Epoch 90
+Total Cost: 7972.79827881
+Training Accuracy: 0.488111111111
+Validation Accuracy: 0.482
+-----------------------
+-----------------------
+Epoch 100
+Total Cost: 7971.88598824
+Training Accuracy: 0.488666666667
+Validation Accuracy: 0.486
+-----------------------
+-----------------------
+Epoch 110
+Total Cost: 7971.39332962
+Training Accuracy: 0.489111111111
+Validation Accuracy: 0.485
+-----------------------
+-----------------------
+Epoch 120
+Total Cost: 7971.3284893
+Training Accuracy: 0.489444444444
+Validation Accuracy: 0.487
+-----------------------
+-----------------------
+Epoch 130
+Total Cost: 7971.25772858
+Training Accuracy: 0.488777777778
+Validation Accuracy: 0.485
+-----------------------
+-----------------------
+Epoch 140
+Total Cost: 7971.16862679
+Training Accuracy: 0.488555555556
+Validation Accuracy: 0.485
+-----------------------
+-----------------------
+Epoch 150
+Total Cost: 7971.09737396
+Training Accuracy: 0.488888888889
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 160
+Total Cost: 7971.05454826
+Training Accuracy: 0.488555555556
+Validation Accuracy: 0.485
+-----------------------
+-----------------------
+Epoch 170
+Total Cost: 7970.97748566
+Training Accuracy: 0.488555555556
+Validation Accuracy: 0.485
+-----------------------
+-----------------------
+Epoch 180
+Total Cost: 7970.90428734
+Training Accuracy: 0.489222222222
+Validation Accuracy: 0.485
+-----------------------
+-----------------------
+Epoch 190
+Total Cost: 7970.83733177
+Training Accuracy: 0.489777777778
+Validation Accuracy: 0.484
+-----------------------
+-----------------------
+Epoch 200
+Total Cost: 7970.77728844
+Training Accuracy: 0.489444444444
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 210
+Total Cost: 7970.70580482
+Training Accuracy: 0.489222222222
+Validation Accuracy: 0.482
+-----------------------
+-----------------------
+Epoch 220
+Total Cost: 7970.63647461
+Training Accuracy: 0.489333333333
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 230
+Total Cost: 7970.5668869
+Training Accuracy: 0.489111111111
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 240
+Total Cost: 7970.49329758
+Training Accuracy: 0.49
+Validation Accuracy: 0.483
+-----------------------
+-----------------------
+Epoch 250
+Total Cost: 7970.42305183
+Training Accuracy: 0.49
+Validation Accuracy: 0.483
+-----------------------
+
+Process finished with exit code 0
